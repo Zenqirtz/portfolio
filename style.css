@@ -327,6 +327,7 @@ a {
 
 p {
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .font-mono {

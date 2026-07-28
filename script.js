@@ -1,3 +1,37 @@
+/* --- LOADING SCREEN --- */
+(function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  const barFill = document.getElementById('loader-bar-fill');
+  const percentEl = document.getElementById('loader-percent');
+
+  if (!loadingScreen) return;
+
+  // Lock scrolling while loading
+  document.body.style.overflow = 'hidden';
+
+  let progress = 0;
+  const totalDuration = 1800; // ms
+  const interval = 30;
+  const steps = totalDuration / interval;
+  const increment = 100 / steps;
+
+  const timer = setInterval(() => {
+    // Add slight randomness for a more natural feel
+    progress += increment * (0.8 + Math.random() * 0.6);
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(timer);
+      // Small pause at 100% before hiding
+      setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+    barFill.style.width = progress + '%';
+    percentEl.textContent = Math.floor(progress) + '%';
+  }, interval);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --- 1. LANGUAGE SWITCHING --- */

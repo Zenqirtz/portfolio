@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --- 5. SKILLS FILTERING --- */
   const filterButtons = document.querySelectorAll('.filter-btn');
   const skillCards = document.querySelectorAll('.skill-card');
+  const skillsGrid = document.querySelector('.skills-grid');
   
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -136,10 +137,18 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const filterValue = btn.getAttribute('data-filter');
       
+      if (skillsGrid) {
+        if (filterValue !== 'all') {
+          skillsGrid.classList.add('is-filtered');
+        } else {
+          skillsGrid.classList.remove('is-filtered');
+        }
+      }
+      
       skillCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         if (filterValue === 'all' || cardCategory === filterValue) {
-          card.style.display = 'block';
+          card.style.display = skillsGrid && filterValue !== 'all' ? 'flex' : 'block';
           // Force a tiny stagger entrance
           card.style.opacity = '0';
           card.style.transform = 'translateY(10px)';

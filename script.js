@@ -98,13 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
       "Mahasiswa Teknologi Informasi",
       "Web Developer",
       "Laravel Developer",
-      "Flutter Developer"
+      "Flutter Developer",
+      "Internet of Things"
     ],
     en: [
       "Information Technology Student",
       "Web Developer",
       "Laravel Developer",
-      "Flutter Developer"
+      "Flutter Developer",
+      "Internet of Things"
     ]
   };
   

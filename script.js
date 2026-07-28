@@ -1,3 +1,12 @@
+/* --- ALWAYS RESET TO HOME (TOP) ON REFRESH --- */
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+if (window.location.hash) {
+  history.replaceState(null, null, window.location.pathname);
+}
+
 /* --- LOADING SCREEN & THEME INITIALIZATION --- */
 (function() {
   // Apply saved theme immediately before render so loader uses correct theme colors

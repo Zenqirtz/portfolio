@@ -635,7 +635,7 @@ header .nav-container {
 
 .hero-slider-container {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   border: var(--border-width) solid var(--border-color);
   margin-bottom: 1.5rem;
   position: relative;
@@ -653,13 +653,17 @@ header .nav-container {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 15%;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
+}
+
+.slider-img[src*="photo2"] {
+  object-position: center top;
 }
 
 .slider-img.active {

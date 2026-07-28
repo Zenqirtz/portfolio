@@ -638,4 +638,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initProjectSliders();
+
+  /* --- CONTACT FORM (Formspree) --- */
+  const contactForm = document.getElementById('portfolio-contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const lang = document.documentElement.getAttribute('lang') || 'id';
+
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = lang === 'id'
+        ? '<span class="lang-id">Mengirim...</span>'
+        : '<span class="lang-en">Sending...</span>';
+
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+
+      try {
+        const data = new FormData(contactForm);
+        const response = await fetch('https://formspree.io/f/meeynegw', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          formStatus.className = 'form-status form-status--success';
+          formStatus.textContent = lang === 'id'
+            ? '✅ Pesan terkirim! Terima kasih, saya akan membalas segera.'
+            : '✅ Message sent! Thank you, I\'ll reply as soon as possible.';
+          contactForm.reset();
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        formStatus.className = 'form-status form-status--error';
+        formStatus.textContent = lang === 'id'
+          ? '❌ Gagal mengirim pesan. Coba lagi atau hubungi via email.'
+          : '❌ Failed to send message. Please try again or contact via email.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = lang === 'id'
+          ? '<span class="lang-id">Kirim Sekarang &rarr;</span>'
+          : '<span class="lang-en">Send Message &rarr;</span>';
+      }
+    });
+  }
+
 });

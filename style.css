@@ -1754,3 +1754,42 @@ footer .credits {
 .project-slider-dot.active {
   background-color: var(--accent);
 }
+
+/* --- CONTACT FORM STATUS --- */
+.form-status {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: var(--border-width) solid transparent;
+  display: none;
+}
+
+.form-status:not(:empty) {
+  display: block;
+}
+
+.form-status--success {
+  background-color: #d1fae5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+[data-theme="dark"] .form-status--success {
+  background-color: #064e3b;
+  border-color: #10b981;
+  color: #6ee7b7;
+}
+
+.form-status--error {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+[data-theme="dark"] .form-status--error {
+  background-color: #450a0a;
+  border-color: #ef4444;
+  color: #fca5a5;
+}

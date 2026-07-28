@@ -849,21 +849,27 @@ header .nav-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  align-items: start;
 }
 
 .about-details p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .about-info-boxes {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
 .info-box {
   background-color: var(--bg-card);
+}
+
+.info-box p {
+  text-align: justify;
 }
 
 .info-box-header {

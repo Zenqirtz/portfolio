@@ -24,6 +24,7 @@
       // Small pause at 100% before hiding
       setTimeout(() => {
         loadingScreen.classList.add('hidden');
+        document.body.classList.add('page-loaded');
         document.body.style.overflow = '';
       }, 300);
     }

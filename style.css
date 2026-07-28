@@ -61,12 +61,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s ease;
   overflow: hidden;
 }
 
 #loading-screen.hidden {
   opacity: 0;
+  transform: scale(1.1);
   visibility: hidden;
   pointer-events: none;
 }
@@ -81,6 +82,12 @@
   min-width: 320px;
   max-width: 90vw;
   overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease;
+}
+
+#loading-screen.hidden .loader-box {
+  transform: scale(0.9) translateY(-20px);
+  opacity: 0;
 }
 
 .loader-glitch-bar {
@@ -393,13 +400,40 @@ section {
 }
 
 /* --- HEADER & NAVIGATION --- */
+/* --- HERO SECTION ENTRANCE ANIMATION --- */
+body:not(.page-loaded) #hero .hero-content,
+body:not(.page-loaded) #hero .hero-visual,
+body:not(.page-loaded) header {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 header {
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: var(--bg-color);
   border-bottom: var(--border-width) solid var(--border-color);
-  transition: background-color var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease, opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+body.page-loaded #hero .hero-content {
+  animation: smoothHeroFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body.page-loaded #hero .hero-visual {
+  animation: smoothHeroFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+@keyframes smoothHeroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 header .nav-container {

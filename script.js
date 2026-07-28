@@ -671,7 +671,7 @@ document.addEventListener('DOMContentLoaded', () => {
           formStatus.className = 'form-status form-status--success';
           formStatus.textContent = lang === 'id'
             ? '✅ Pesan terkirim! Terima kasih, saya akan membalas segera.'
-            : '✅ Message sent! Thank you, I\'ll reply as soon as possible.';
+            : "✅ Message sent! Thank you, I'll reply as soon as possible.";
           contactForm.reset();
         } else {
           throw new Error('Server error');

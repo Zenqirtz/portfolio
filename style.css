@@ -244,6 +244,11 @@ p {
 section {
   padding: 6rem 0;
   border-bottom: var(--border-width) solid var(--border-color);
+  scroll-margin-top: 80px;
+}
+
+#hero {
+  scroll-margin-top: 80px;
 }
 
 /* --- HEADER & NAVIGATION --- */

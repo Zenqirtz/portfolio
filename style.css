@@ -746,7 +746,7 @@ header .nav-container {
 }
 
 .slider-img[src*="photo2"] {
-  object-position: center 80%;
+  object-position: center 50%;
 }
 
 .slider-img.active {

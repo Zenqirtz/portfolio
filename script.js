@@ -1,5 +1,9 @@
-/* --- LOADING SCREEN --- */
+/* --- LOADING SCREEN & THEME INITIALIZATION --- */
 (function() {
+  // Apply saved theme immediately before render so loader uses correct theme colors
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
   const loadingScreen = document.getElementById('loading-screen');
   const barFill = document.getElementById('loader-bar-fill');
   const percentEl = document.getElementById('loader-percent');

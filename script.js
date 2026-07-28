@@ -213,12 +213,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Custom styled visual template for simulated certificates inside modal body
   function generateSimulatedCertificate(type, lang) {
     let imgPath = "";
-    if (type === 'autocad') {
-      imgPath = "assets/cert-autocad.png";
-    } else if (type === 'korina') {
-      imgPath = "assets/cert-korina.png";
-    } else if (type === 'lestari') {
-      imgPath = "assets/cert-lestari.png";
+    if (type === 'film') {
+      imgPath = "assets/cert-film.png";
+    } else if (type === 'kmfv') {
+      imgPath = "assets/cert-kmfv.png";
+    } else if (type === 'hmi') {
+      imgPath = "assets/cert-hmi.png";
     }
     
     return `

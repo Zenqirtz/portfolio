@@ -1033,12 +1033,18 @@
     </div>
   </div>
 
-  <!-- Vercel Web Analytics -->
+  <!-- Vercel Web Analytics (Standalone CDN for Static HTML) -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@vercel/analytics@1.3.1/dist/index.js" data-mode="production"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.vercelAnalytics && window.vercelAnalytics.inject) {
+        window.vercelAnalytics.inject();
+      }
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

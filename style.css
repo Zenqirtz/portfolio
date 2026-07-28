@@ -1123,7 +1123,6 @@ header .nav-container {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
   transition: all 0.3s ease;
-  align-items: start;
 }
 
 /* Landscape full-width styling when single card is active after filter */
@@ -1136,11 +1135,11 @@ header .nav-container {
   flex-direction: row;
   align-items: center;
   gap: 2rem;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
 }
 
 .skills-grid.is-filtered .skill-card-header {
-  min-width: 220px;
+  min-width: 240px;
 }
 
 .skills-grid.is-filtered .skill-card h3 {
@@ -1176,7 +1175,6 @@ header .nav-container {
   border: var(--border-width) solid var(--border-color);
   box-shadow: 4px 4px 0px var(--border-color);
   padding: 1.5rem;
-  height: fit-content;
 }
 
 .skill-card h3 {

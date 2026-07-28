@@ -47,16 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const words = {
     id: [
-      "Mahasiswa Sistem Informasi",
-      "Quality Control",
-      "Staf Produksi / Manufaktur",
-      "Draftsman AutoCAD 2D"
+      "Mahasiswa Teknologi Informasi",
+      "Web Developer",
+      "Laravel Developer",
+      "Flutter Developer"
     ],
     en: [
-      "Information Systems Student",
-      "Quality Control",
-      "Production Staff",
-      "AutoCAD 2D Draftsman"
+      "Information Technology Student",
+      "Web Developer",
+      "Laravel Developer",
+      "Flutter Developer"
     ]
   };
   

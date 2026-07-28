@@ -283,18 +283,20 @@ header .nav-container {
 
 .nav-menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   list-style: none;
+  align-items: center;
 }
 
 .nav-link {
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  padding: 0.5rem;
+  padding: 0.4rem 0.6rem;
   border-bottom: 2px solid transparent;
   transition: all 0.1s ease;
+  white-space: nowrap;
 }
 
 .nav-link:hover {

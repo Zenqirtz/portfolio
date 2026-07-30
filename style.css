@@ -1231,6 +1231,14 @@ header .nav-container {
 
 .cert-card {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cert-card .neo-badge {
+  align-self: flex-start;
+  margin-bottom: 1rem;
 }
 
 .cert-thumbnail {
@@ -1286,6 +1294,7 @@ header .nav-container {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--text-muted);
+  margin-bottom: 1.5rem;
 }
 
 /* --- CONTACT SECTION --- */

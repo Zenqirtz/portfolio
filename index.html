@@ -604,16 +604,8 @@
              data-title-en="Arduino & Website Smart Room"
              data-desc-id="Sistem monitoring smart room IoT menggunakan Laravel, Blade, MySQL, dan Tailwind CSS untuk mengambil dan memproses data sensor real-time (suhu, asap, dan kelembapan) dari node hardware aktif. Dilengkapi rule engine otomatis untuk mencatat aktivitas sistem dalam database MySQL, dipadu dengan dashboard Tailwind CSS responsif untuk visualisasi sensor langsung dan pelacakan antrian perintah aktuator (kipas, exhaust, sprinkler)."
              data-desc-en="A smart room IoT monitoring system using Laravel, Blade, MySQL, and Tailwind CSS to ingest and process real-time sensor data (temperature, smoke, and humidity) from active hardware nodes. Engineered an automated rule engine to log system activities in a MySQL database, paired with a responsive Tailwind CSS dashboard for live sensor visualization and actuator command queue tracking (e.g., exhaust fans and sprinkler activation).">
-          <div class="project-visual" style="background-color: var(--primary);">
-            <svg viewBox="0 0 100 100">
-              <rect x="20" y="25" width="60" height="50" rx="3" fill="var(--primary-light)" stroke="#000" stroke-width="3"/>
-              <circle cx="35" cy="45" r="8" fill="var(--accent)" stroke="#000" stroke-width="2"/>
-              <circle cx="65" cy="45" r="8" fill="var(--success)" stroke="#000" stroke-width="2"/>
-              <rect x="40" y="55" width="20" height="10" rx="2" fill="var(--secondary)" stroke="#000" stroke-width="2"/>
-              <line x1="30" y1="20" x2="30" y2="25" stroke="#000" stroke-width="2"/>
-              <line x1="50" y1="17" x2="50" y2="25" stroke="#000" stroke-width="2"/>
-              <line x1="70" y1="20" x2="70" y2="25" stroke="#000" stroke-width="2"/>
-            </svg>
+          <div class="project-visual">
+            <img src="assets/smart.png" alt="Arduino & Website Smart Room" class="project-img">
           </div>
           <div class="project-tags">
             <span class="neo-badge primary">Arduino</span>
@@ -804,23 +796,32 @@
       </div>
 
       <div class="certs-grid reveal">
-        <!-- Cert 1: Magang Film -->
-        <div class="neo-box neo-box-interactive cert-card" data-title="Surat Keterangan Magang Film" data-title-en="Film Internship Certificate" data-desc="Sertifikat magang produksi film Dhermaganing Ati oleh Novian Ramadhani Zuhri, Maret - Mei 2025." data-desc-en="Film production internship certificate for Dhermaganing Ati by Novian Ramadhani Zuhri, March - May 2025." data-type="film">
+        <!-- Cert 1: PEMILWA FV 2025 -->
+        <div class="neo-box neo-box-interactive cert-card" data-title="Ketua Tim Verifikasi PEMILWA FV 2025" data-title-en="Head of Verification Committee for PEMILWA FV 2025" data-desc="Surat Keputusan Panitia Pemilihan Mahasiswa (PEMILWA) Fakultas Vokasi 2025 sebagai Ketua Tim Verifikasi." data-desc-en="Appointment letter as Head of Verification Committee for the Vocational Faculty Student Election (PEMILWA FV) 2025." data-type="pemilwa">
           <div class="cert-thumbnail">
-            <img src="assets/cert-film.png" alt="Film Internship Certificate" class="cert-preview-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <img src="assets/cert-pemilwa.png" alt="PEMILWA FV 2025 Verification Committee Certificate" class="cert-preview-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="cert-fallback-visual" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; background:var(--primary-light); font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:#000;">
-              📜 <span>[DOC CERTIFICATE]</span>
+              📜 <span>[SK PEMILWA 2025]</span>
             </div>
           </div>
           <span class="neo-badge primary">
-            <span class="lang-id">Sertifikat Magang</span>
-            <span class="lang-en">Internship Certificate</span>
+            <span class="lang-id">Kepanitiaan</span>
+            <span class="lang-en">Committee</span>
           </span>
           <h3>
-            <span class="lang-id">Produksi Film</span>
-            <span class="lang-en">Film Production</span>
+            <span class="lang-id">Ketua Tim Verifikasi PEMILWA FV</span>
+            <span class="lang-en">Head of Verification Committee</span>
           </h3>
-          <p class="cert-issuer">Dhermaganing Ati • 2025</p>
+          <p class="cert-issuer">
+            <span class="lang-id">PEMILWA FV • 2025</span>
+            <span class="lang-en">PEMILWA FV • 2025</span>
+          </p>
+          <div class="project-links">
+            <button class="neo-btn btn-white btn-sm cert-detail-btn" style="font-size: 0.8rem; padding: 0.5rem 1rem; cursor: pointer; width: 100%; text-align: center;">
+              <span class="lang-id">Lihat Detail &rarr;</span>
+              <span class="lang-en">View Details &rarr;</span>
+            </button>
+          </div>
         </div>
 
         <!-- Cert 2: Organisasi -->
@@ -843,14 +844,20 @@
             <span class="lang-id">Kongres Mahasiswa FV • 2025</span>
             <span class="lang-en">Vocational Faculty Student Congress • 2025</span>
           </p>
+          <div class="project-links">
+            <button class="neo-btn btn-white btn-sm cert-detail-btn" style="font-size: 0.8rem; padding: 0.5rem 1rem; cursor: pointer; width: 100%; text-align: center;">
+              <span class="lang-id">Lihat Detail &rarr;</span>
+              <span class="lang-en">View Details &rarr;</span>
+            </button>
+          </div>
         </div>
 
-        <!-- Cert 3: HMI -->
-        <div class="neo-box neo-box-interactive cert-card" data-title="Sertifikat Kader HMI" data-title-en="HMI Cadre Certificate" data-desc="Sertifikat keanggotaan dan kaderisasi Himpunan Mahasiswa Islam (HMI) sejak 2024." data-desc-en="Membership and cadre certificate of the Islamic Student Association (HMI) since 2024." data-type="hmi">
+        <!-- Cert 3: HMPS TI -->
+        <div class="neo-box neo-box-interactive cert-card" data-title="Anggota HMPS TI" data-title-en="HMPS TI Member" data-desc="Surat keterangan keanggotaan Himpunan Mahasiswa Program Studi Teknologi Informasi (HMPS TI)." data-desc-en="Membership certificate of the Information Technology Study Program Student Association (HMPS TI)." data-type="hmps">
           <div class="cert-thumbnail">
-            <img src="assets/cert-hmi.png" alt="HMI Cadre Certificate" class="cert-preview-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <img src="assets/cert-hmps.png" alt="HMPS TI Member Certificate" class="cert-preview-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="cert-fallback-visual" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; background:var(--primary-light); font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:#000;">
-              📜 <span>[KADER HMI]</span>
+              📜 <span>[HMPS TI]</span>
             </div>
           </div>
           <span class="neo-badge accent">
@@ -858,13 +865,47 @@
             <span class="lang-en">Organization</span>
           </span>
           <h3>
-            <span class="lang-id">Kader HMI</span>
-            <span class="lang-en">HMI Cadre</span>
+            <span class="lang-id">Anggota HMPS TI</span>
+            <span class="lang-en">HMPS TI Member</span>
           </h3>
           <p class="cert-issuer">
-            <span class="lang-id">Himpunan Mahasiswa Islam • 2024</span>
-            <span class="lang-en">Islamic Student Association • 2024</span>
+            <span class="lang-id">HMPS Teknologi Informasi • 2025</span>
+            <span class="lang-en">IT Study Program Student Association • 2025</span>
           </p>
+          <div class="project-links">
+            <button class="neo-btn btn-white btn-sm cert-detail-btn" style="font-size: 0.8rem; padding: 0.5rem 1rem; cursor: pointer; width: 100%; text-align: center;">
+              <span class="lang-id">Lihat Detail &rarr;</span>
+              <span class="lang-en">View Details &rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cert 4: PKKMB FV -->
+        <div class="neo-box neo-box-interactive cert-card" data-title="PKKMB Fakultas Vokasi" data-title-en="PKKMB Vocational Faculty" data-desc="Pengenalan Kehidupan Kampus Bagi Mahasiswa Baru (PKKMB) Fakultas Vokasi." data-desc-en="Campus Life Orientation for New Students (PKKMB) Vocational Faculty." data-type="pkkmb">
+          <div class="cert-thumbnail">
+            <img src="assets/yuwa.png" alt="PKKMB FV Certificate" class="cert-preview-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="cert-fallback-visual" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; background:var(--primary-light); font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:#000;">
+              📜 <span>[PKKMB FV]</span>
+            </div>
+          </div>
+          <span class="neo-badge primary">
+            <span class="lang-id">Kepanitiaan</span>
+            <span class="lang-en">Committee</span>
+          </span>
+          <h3>
+            <span class="lang-id">PKKMB Fakultas Vokasi</span>
+            <span class="lang-en">PKKMB Vocational Faculty</span>
+          </h3>
+          <p class="cert-issuer">
+            <span class="lang-id">Pengenalan Kehidupan Kampus</span>
+            <span class="lang-en">Campus Life Orientation</span>
+          </p>
+          <div class="project-links">
+            <button class="neo-btn btn-white btn-sm cert-detail-btn" style="font-size: 0.8rem; padding: 0.5rem 1rem; cursor: pointer; width: 100%; text-align: center;">
+              <span class="lang-id">Lihat Detail &rarr;</span>
+              <span class="lang-en">View Details &rarr;</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

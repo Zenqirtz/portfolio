@@ -223,15 +223,25 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Custom styled visual template for simulated certificates inside modal body
   function generateSimulatedCertificate(type, lang) {
-    let imgPath = "";
-    if (type === 'film') {
-      imgPath = "assets/cert-film.png";
-    } else if (type === 'kmfv') {
-      imgPath = "assets/cert-kmfv.png";
-    } else if (type === 'hmi') {
-      imgPath = "assets/cert-hmi.png";
-    }
-    
+    const btnLabel = lang === 'id' ? 'Buka / Unduh Dokumen PDF' : 'Open / Download PDF Document';
+
+    // Config per type: imgPath and optional pdfPath
+    const config = {
+      pemilwa: { img: 'assets/cert-pemilwa.png', pdf: 'assets/pemilwa2025.pdf' },
+      kmfv:    { img: 'assets/cert-kmfv.png',    pdf: null },
+      hmps:    { img: 'assets/cert-hmps.png',     pdf: 'assets/HMPSTI.pdf' },
+      pkkmb:   { img: 'assets/yuwa.png',          pdf: null },
+    };
+    const { img: imgPath, pdf: pdfPath } = config[type] || { img: '', pdf: null };
+
+    const pdfButton = pdfPath ? `
+      <div style="margin-top: 0.75rem; text-align: center;">
+        <a href="${pdfPath}" target="_blank" class="neo-btn btn-primary btn-sm"
+           style="display: inline-block; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.85rem;">
+          📄 ${btnLabel} &rarr;
+        </a>
+      </div>` : '';
+
     return `
       <div style="border: 3px solid #000; padding: 0.5rem; background-color: #ffffff; box-shadow: 6px 6px 0px #000; display: inline-block; max-width: 100%;">
         <img src="${imgPath}" alt="Certificate Document" style="max-width: 100%; max-height: 60vh; display: block; border: 1px solid #000;" />
@@ -240,7 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   certCards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      // Don't re-trigger if a link inside the card was clicked
+      if (e.target.closest('a') && !e.target.closest('.cert-detail-btn')) {
+        return;
+      }
       const type = card.getAttribute('data-type');
       const titleId = card.getAttribute('data-title');
       const titleEn = card.getAttribute('data-title-en');

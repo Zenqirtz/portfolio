@@ -231,6 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
       kmfv:    { img: 'assets/cert-kmfv.png',    pdf: null },
       hmps:    { img: 'assets/cert-hmps.png',     pdf: 'assets/HMPSTI.pdf' },
       pkkmb:   { img: 'assets/yuwa.png',          pdf: null },
+      charity: { img: 'assets/charity.png',       pdf: null },
+      java:    { img: 'assets/java.png',          pdf: null },
     };
     const { img: imgPath, pdf: pdfPath } = config[type] || { img: '', pdf: null };
 

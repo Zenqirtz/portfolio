@@ -233,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
       pkkmb:   { img: 'assets/yuwa.png',          pdf: null },
       charity: { img: 'assets/charity.png',       pdf: null },
       java:    { img: 'assets/java.png',          pdf: null },
+      value:   { img: 'assets/value.png',         pdf: null },
     };
     const { img: imgPath, pdf: pdfPath } = config[type] || { img: '', pdf: null };
 
@@ -245,8 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>` : '';
 
     return `
-      <div style="border: 3px solid #000; padding: 0.5rem; background-color: #ffffff; box-shadow: 6px 6px 0px #000; display: inline-block; max-width: 100%;">
-        <img src="${imgPath}" alt="Certificate Document" style="max-width: 100%; max-height: 60vh; display: block; border: 1px solid #000;" />
+      <div style="text-align: center; max-width: 100%;">
+        <div style="border: 3px solid #000; padding: 0.5rem; background-color: #ffffff; box-shadow: 6px 6px 0px #000; display: inline-block; max-width: 100%;">
+          <img src="${imgPath}" alt="Certificate Document" style="max-width: 100%; max-height: 55vh; display: block; border: 1px solid #000;" />
+        </div>
+        ${pdfButton}
       </div>
     `;
   }

@@ -234,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
       charity: { img: 'assets/charity.png',       pdf: null },
       java:    { img: 'assets/java.png',          pdf: null },
       value:   { img: 'assets/value.png',         pdf: null },
+      dpm2:    { img: 'assets/dpm2.png',           pdf: null },
     };
     const { img: imgPath, pdf: pdfPath } = config[type] || { img: '', pdf: null };
 

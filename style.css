@@ -446,6 +446,10 @@ p {
   margin-bottom: 4rem;
   text-align: center;
   position: relative;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-header h2 {
@@ -457,6 +461,8 @@ p {
   padding: 0.75rem 2rem;
   box-shadow: 6px 6px 0px #000000;
   transform: rotate(-1.5deg);
+  text-align: center;
+  max-width: 90%;
 }
 
 [data-theme="dark"] .section-header h2 {
@@ -1656,6 +1662,59 @@ footer .credits {
 
   .hero-buttons .neo-btn {
     width: 100%;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+    padding: 0 0.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    box-shadow: 4px 4px 0px #000000;
+    transform: rotate(-1deg);
+    word-break: keep-all;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  [data-theme="dark"] .section-header h2 {
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .timeline {
+    padding: 1rem 0;
+  }
+
+  .timeline-content {
+    width: calc(100% - 35px);
+    padding: 1rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .certs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .modal {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .modal-close {
+    top: -16px;
+    right: -10px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
   }
 }
 

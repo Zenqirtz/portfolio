@@ -1,11 +1,11 @@
 {
-  "name": "eka-portfolio-brutalist",
+  "name": "arga-portfolio-brutalist",
   "version": "1.0.0",
-  "description": "Bilingual Neo-brutalist Portfolio for Eka Ade Putra Kurniawan",
+  "description": "Bilingual Neo-brutalist Portfolio for Muhammad Arga Pradana",
   "scripts": {
     "build": "echo 'Static build complete'",
     "dev": "node server.js"
   },
-  "author": "Eka Ade Putra Kurniawan",
+  "author": "Muhammad Arga Pradana",
   "license": "MIT"
 }

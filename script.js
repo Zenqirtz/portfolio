@@ -235,22 +235,31 @@ document.addEventListener('DOMContentLoaded', () => {
       java:    { img: 'assets/java.png',          pdf: null },
       value:   { img: 'assets/value.png',         pdf: null },
       dpm2:    { img: 'assets/dpm2.png',           pdf: null },
+      fest:    { img: 'assets/cert-fest.png',     pdf: 'assets/fest.pdf' },
     };
     const { img: imgPath, pdf: pdfPath } = config[type] || { img: '', pdf: null };
 
     const pdfButton = pdfPath ? `
-      <div style="margin-top: 0.75rem; text-align: center;">
+      <div style="margin-bottom: 1.25rem; text-align: center;">
         <a href="${pdfPath}" target="_blank" class="neo-btn btn-primary btn-sm"
-           style="display: inline-block; text-decoration: none; padding: 0.5rem 1rem; font-size: 0.85rem;">
+           style="display: inline-block; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.9rem; font-weight: 700; background-color: var(--accent); color: #000; border: 2px solid #000; box-shadow: 3px 3px 0px #000;">
           📄 ${btnLabel} &rarr;
         </a>
       </div>` : '';
 
+    const imageOrPdfPreview = imgPath ? `
+      <div style="border: 3px solid #000; padding: 0.5rem; background-color: #ffffff; box-shadow: 6px 6px 0px #000; display: inline-block; max-width: 100%;">
+        <img src="${imgPath}" alt="Certificate Document" style="max-width: 100%; max-height: 55vh; display: block; border: 1px solid #000;" />
+      </div>
+    ` : (pdfPath ? `
+      <div style="border: 3px solid #000; padding: 1.5rem; background-color: #ffffff; box-shadow: 6px 6px 0px #000; display: inline-block; width: 100%; max-width: 100%;">
+        <iframe src="${pdfPath}" style="width: 100%; height: 50vh; border: 1px solid #000;" title="Certificate Document PDF"></iframe>
+      </div>
+    ` : '');
+
     return `
       <div style="text-align: center; max-width: 100%;">
-        <div style="border: 3px solid #000; padding: 0.5rem; background-color: #ffffff; box-shadow: 6px 6px 0px #000; display: inline-block; max-width: 100%;">
-          <img src="${imgPath}" alt="Certificate Document" style="max-width: 100%; max-height: 55vh; display: block; border: 1px solid #000;" />
-        </div>
+        ${imageOrPdfPreview}
         ${pdfButton}
       </div>
     `;

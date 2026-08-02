@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /
+
 Sitemap: https://muhammadargapradana.vercel.app/sitemap.xml

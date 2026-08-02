@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://muhammadargapradana.vercel.app/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <!-- Profile Images -->
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/photo1.png</image:loc>
+      <image:title>Foto Profil Utama Muhammad Arga Pradana</image:title>
+      <image:caption>Muhammad Arga Pradana - Mahasiswa Teknologi Informasi Universitas Brawijaya &amp; Web Developer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/photo2.png</image:loc>
+      <image:title>Foto Profil Muhammad Arga Pradana</image:title>
+      <image:caption>Muhammad Arga Pradana - Web Developer Malang</image:caption>
+    </image:image>
+
+    <!-- Project Images -->
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/catering.png</image:loc>
+      <image:title>Catering Order Website Project - Muhammad Arga Pradana</image:title>
+      <image:caption>Platform pemesanan katering makanan menggunakan Laravel, Blade, MySQL, dan Tailwind CSS.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/health.png</image:loc>
+      <image:title>Health Education Website Project - Muhammad Arga Pradana</image:title>
+      <image:caption>Platform kesehatan dan kebugaran digital menggunakan PHP, Tailwind CSS, dan MySQL.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/sims.png</image:loc>
+      <image:title>Smart Infusion Monitoring System (SIMS) Project - Muhammad Arga Pradana</image:title>
+      <image:caption>Sistem monitoring infus pasien real-time berbasis React.js, Laravel, Inertia.js, dan Tailwind CSS.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/brt.png</image:loc>
+      <image:title>Website Manajemen Bengkel Project - Muhammad Arga Pradana</image:title>
+      <image:caption>Platform manajemen bengkel berbasis web menggunakan Laravel, Blade, PHP, dan MySQL.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/smart.png</image:loc>
+      <image:title>Arduino &amp; Website Smart Room Project - Muhammad Arga Pradana</image:title>
+      <image:caption>Sistem monitoring smart room IoT menggunakan Laravel, Blade, MySQL, dan Arduino.</image:caption>
+    </image:image>
+
+    <!-- Certificate & Credential Images -->
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/cert-pemilwa.png</image:loc>
+      <image:title>Sertifikat Ketua Tim Verifikasi PEMILWA FV 2025 - Muhammad Arga Pradana</image:title>
+      <image:caption>Surat Keputusan Panitia Pemilihan Mahasiswa (PEMILWA) Fakultas Vokasi 2025 sebagai Ketua Tim Verifikasi.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/java.png</image:loc>
+      <image:title>Sertifikat Introduction to Java Sololearn - Muhammad Arga Pradana</image:title>
+      <image:caption>Sertifikat kursus Introduction to Java dari Sololearn.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/cert-hmps.png</image:loc>
+      <image:title>Sertifikat Anggota HMPS TI 2025 - Muhammad Arga Pradana</image:title>
+      <image:caption>Surat keterangan keanggotaan Himpunan Mahasiswa Program Studi Teknologi Informasi (HMPS TI) Universitas Brawijaya.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/yuwa.png</image:loc>
+      <image:title>Sertifikat PKKMB Fakultas Vokasi - Muhammad Arga Pradana</image:title>
+      <image:caption>Pengenalan Kehidupan Kampus Bagi Mahasiswa Baru (PKKMB) Fakultas Vokasi Universitas Brawijaya.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/charity.png</image:loc>
+      <image:title>Sertifikat IT Charity 2025 - Muhammad Arga Pradana</image:title>
+      <image:caption>Sertifikat Kepanitiaan IT Charity 2025 sebagai Kepala Divisi Sponsorship dan Konsumsi.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/value.png</image:loc>
+      <image:title>Sertifikat VALUE 2025 - Muhammad Arga Pradana</image:title>
+      <image:caption>Sertifikat Kepanitiaan Vocational Legislative United (VALUE) 2025 sebagai Pengawas Kompetisi dan Staff Divisi Acara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/dpm2.png</image:loc>
+      <image:title>Sertifikat Staff Ahli BALEG DPM FV 2025 - Muhammad Arga Pradana</image:title>
+      <image:caption>Sertifikat keanggotaan sebagai Staff Ahli Badan Legislasi (BALEG) Dewan Perwakilan Mahasiswa Fakultas Vokasi.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/cert-fest.png</image:loc>
+      <image:title>Sertifikat UI/UX Design Competition Code Fest 2026 - Muhammad Arga Pradana</image:title>
+      <image:caption>Sertifikat penghargaan atas partisipasi dan pencapaian pada UI/UX Design Competition di Lomba Code Fest 2026.</image:caption>
+    </image:image>
   </url>
 </urlset>

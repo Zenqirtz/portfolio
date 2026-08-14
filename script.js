@@ -8,7 +8,7 @@ if (window.location.hash) {
 }
 
 /* --- LOADING SCREEN & THEME INITIALIZATION --- */
-(function() {
+(function () {
   // Apply saved theme immediately before render so loader uses correct theme colors
   const savedTheme = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
@@ -51,15 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --- 1. LANGUAGE SWITCHING --- */
   const langToggle = document.getElementById('lang-toggle');
   let currentLang = localStorage.getItem('lang') || 'id';
-  
+
   // Set initial language
   document.documentElement.setAttribute('lang', currentLang);
-  
+
   langToggle.addEventListener('click', () => {
     currentLang = currentLang === 'id' ? 'en' : 'id';
     document.documentElement.setAttribute('lang', currentLang);
     localStorage.setItem('lang', currentLang);
-    
+
     // Restart typewriter with new language list
     initTypewriter();
   });
@@ -68,18 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
   const sunIcon = themeToggle.querySelector('.sun-icon');
   const moonIcon = themeToggle.querySelector('.moon-icon');
-  
+
   let currentTheme = localStorage.getItem('theme') || 'dark';
   document.documentElement.setAttribute('data-theme', currentTheme);
   updateThemeIcons(currentTheme);
-  
+
   themeToggle.addEventListener('click', () => {
     currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', currentTheme);
     localStorage.setItem('theme', currentTheme);
     updateThemeIcons(currentTheme);
   });
-  
+
   function updateThemeIcons(theme) {
     if (theme === 'dark') {
       sunIcon.style.display = 'block';
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* --- 3. DYNAMIC TYPING EFFECT (BILINGUAL) --- */
   const typedTextSpan = document.getElementById('typed-text');
-  
+
   const words = {
     id: [
       "Mahasiswa Teknologi Informasi",
@@ -109,12 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
       "Internet of Things"
     ]
   };
-  
+
   let typingTimer = null;
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  
+
   function initTypewriter() {
     // Clear any active timers
     if (typingTimer) {
@@ -127,11 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
     wordIndex = wordIndex % words[currentLang].length;
     typeEffect();
   }
-  
+
   function typeEffect() {
     const currentWordList = words[currentLang];
     const currentWord = currentWordList[wordIndex];
-    
+
     if (isDeleting) {
       typedTextSpan.textContent = currentWord.substring(0, charIndex - 1);
       charIndex--;
@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
       typedTextSpan.textContent = currentWord.substring(0, charIndex + 1);
       charIndex++;
     }
-    
+
     let typeSpeed = isDeleting ? 40 : 100;
-    
+
     if (!isDeleting && charIndex === currentWord.length) {
       // Pause at full word
       typeSpeed = 1500;
@@ -152,21 +152,21 @@ document.addEventListener('DOMContentLoaded', () => {
       // Pause before typing next word
       typeSpeed = 500;
     }
-    
+
     typingTimer = setTimeout(typeEffect, typeSpeed);
   }
-  
+
   // Start typewriter on load
   initTypewriter();
 
   /* --- 4. MOBILE HAMBURGER MENU --- */
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
-  
+
   menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('open');
   });
-  
+
   // Close menu when clicking nav link
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
@@ -178,15 +178,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const skillCards = document.querySelectorAll('.skill-card');
   const skillsGrid = document.querySelector('.skills-grid');
-  
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       // Active state on button
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      
+
       const filterValue = btn.getAttribute('data-filter');
-      
+
       if (skillsGrid) {
         if (filterValue !== 'all') {
           skillsGrid.classList.add('is-filtered');
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
           skillsGrid.classList.remove('is-filtered');
         }
       }
-      
+
       skillCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         if (filterValue === 'all' || cardCategory === filterValue) {
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modal-close');
   const modalTitle = document.getElementById('modal-title');
   const modalDesc = document.getElementById('modal-desc');
-  
+
   // Custom styled visual template for simulated certificates inside modal body
   function generateSimulatedCertificate(type, lang) {
     const btnLabel = lang === 'id' ? 'Buka / Unduh Dokumen PDF' : 'Open / Download PDF Document';
@@ -228,14 +228,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Config per type: imgPath and optional pdfPath
     const config = {
       pemilwa: { img: 'assets/cert-pemilwa.png', pdf: 'assets/pemilwa2025.pdf' },
-      kmfv:    { img: 'assets/cert-kmfv.png',    pdf: null },
-      hmps:    { img: 'assets/cert-hmps.png',     pdf: 'assets/HMPSTI.pdf' },
-      pkkmb:   { img: 'assets/yuwa.png',          pdf: null },
-      charity: { img: 'assets/charity.png',       pdf: null },
-      java:    { img: 'assets/java.png',          pdf: null },
-      value:   { img: 'assets/value.png',         pdf: null },
-      dpm2:    { img: 'assets/dpm2.png',           pdf: null },
-      fest:    { img: 'assets/cert-fest.png',     pdf: 'assets/fest.pdf' },
+      kmfv: { img: 'assets/cert-kmfv.png', pdf: null },
+      hmps: { img: 'assets/cert-hmps.png', pdf: 'assets/HMPSTI.pdf' },
+      pkkmb: { img: 'assets/yuwa.png', pdf: null },
+      charity: { img: 'assets/charity.png', pdf: null },
+      java: { img: 'assets/java.png', pdf: null },
+      value: { img: 'assets/value.png', pdf: null },
+      dpm2: { img: 'assets/dpm2.png', pdf: null },
+      fest: { img: 'assets/cert-fest.png', pdf: 'assets/fest.pdf' },
     };
     const { img: imgPath, pdf: pdfPath } = config[type] || { img: '', pdf: null };
 
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
   }
-  
+
   certCards.forEach(card => {
     card.addEventListener('click', (e) => {
       // Don't re-trigger if a link inside the card was clicked
@@ -276,40 +276,40 @@ document.addEventListener('DOMContentLoaded', () => {
       const titleEn = card.getAttribute('data-title-en');
       const descId = card.getAttribute('data-desc');
       const descEn = card.getAttribute('data-desc-en');
-      
+
       const title = currentLang === 'id' ? titleId : titleEn;
       const desc = currentLang === 'id' ? descId : descEn;
-      
+
       // Select modal body content areas
       const modalBody = modal.querySelector('.modal-body');
-      
+
       // Clear previous simulated certs
       const prevCert = modalBody.querySelector('.simulated-cert');
       if (prevCert) prevCert.remove();
-      
+
       // Inject simulated styled credential layout
       const certHTML = document.createElement('div');
       certHTML.className = 'simulated-cert';
       certHTML.style.marginBottom = '1.5rem';
       certHTML.innerHTML = generateSimulatedCertificate(type, currentLang);
-      
+
       modalBody.insertBefore(certHTML, modalTitle);
-      
+
       modalTitle.textContent = title;
       modalDesc.textContent = desc;
-      
+
       modal.style.display = 'flex';
       document.body.style.overflow = 'hidden'; // Lock background scrolling
     });
   });
-  
+
   function closeModal() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto'; // Unlock background scrolling
   }
-  
+
   modalClose.addEventListener('click', closeModal);
-  
+
   // Close on background click
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* --- 7. SCROLL REVEAL ANIMATION --- */
   const revealElements = document.querySelectorAll('.reveal');
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -332,11 +332,28 @@ document.addEventListener('DOMContentLoaded', () => {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters viewport
   });
-  
+
   revealElements.forEach(el => {
     observer.observe(el);
   });
 
+  /* --- 8. SCROLL PROGRESS BAR --- */
+  const scrollProgressBar = document.getElementById('scroll-progress-bar');
+  if (scrollProgressBar) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          scrollProgressBar.style.width = scrollPercent + '%';
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
 
   /* --- 9. HERO PHOTO SLIDER --- */
   const sliderPrev = document.getElementById('slider-prev');
@@ -349,9 +366,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sliderImages.length === 0) return;
     sliderImages.forEach(img => img.classList.remove('active'));
     sliderDots.forEach(dot => dot.classList.remove('active'));
-    
+
     currentSlide = (index + sliderImages.length) % sliderImages.length;
-    
+
     sliderImages[currentSlide].classList.add('active');
     sliderDots[currentSlide].classList.add('active');
   }
@@ -382,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
       showSlide(currentSlide + 1);
       startHeroAutoSlide();
     });
-    
+
     sliderDots.forEach(dot => {
       dot.addEventListener('click', () => {
         const index = parseInt(dot.getAttribute('data-index'));
@@ -420,33 +437,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initModalSlider() {
     if (modalSliderIntervalId) clearInterval(modalSliderIntervalId);
-    
+
     const slider = projectModalVisual.querySelector('.project-slider');
     if (!slider) return;
-    
+
     const images = slider.querySelectorAll('.project-slider-img');
     const dots = projectModalVisual.querySelectorAll('.project-slider-dot');
     let currentIdx = 0;
-    
+
     function showImage(idx) {
       if (images.length === 0) return;
       images.forEach(img => img.classList.remove('active'));
       dots.forEach(d => d.classList.remove('active'));
-      
+
       currentIdx = (idx + images.length) % images.length;
       images[currentIdx].classList.add('active');
       if (dots[currentIdx]) {
         dots[currentIdx].classList.add('active');
       }
     }
-    
+
     function startAutoSlide() {
       if (modalSliderIntervalId) clearInterval(modalSliderIntervalId);
       modalSliderIntervalId = setInterval(() => {
         showImage(currentIdx + 1);
       }, 3000);
     }
-    
+
     dots.forEach(dot => {
       dot.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -455,7 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoSlide();
       });
     });
-    
+
     startAutoSlide();
   }
 
@@ -465,14 +482,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const descId = card.getAttribute('data-desc-id');
     const descEn = card.getAttribute('data-desc-en');
     const link = card.getAttribute('data-link');
-    
+
     currentProjectTitleId = titleId;
     currentProjectTitleEn = titleEn;
 
     // Clone visual content and background color
     const originalVisual = card.querySelector('.project-visual');
     projectModalVisual.innerHTML = originalVisual.innerHTML;
-    
+
     // Check if it has a slider and initialize
     const hasSlider = originalVisual.querySelector('.project-slider');
     if (hasSlider) {
@@ -552,7 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
           : `Hi Eka, I am interested in your "${projectTitle}" project. Could you please share more details?`;
       }
       closeProjectModal();
-      
+
       // Smooth scroll to contact section
       const contactSection = document.getElementById('contact');
       if (contactSection) {
@@ -575,7 +592,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (images.length === 0) return;
         images.forEach(img => img.classList.remove('active'));
         dots.forEach(d => d.classList.remove('active'));
-        
+
         currentIdx = (idx + images.length) % images.length;
         images[currentIdx].classList.add('active');
         if (dots[currentIdx]) {

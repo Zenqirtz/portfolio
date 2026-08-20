@@ -45,6 +45,11 @@
       <image:title>Arduino &amp; Website Smart Room Project - Muhammad Arga Pradana</image:title>
       <image:caption>Sistem monitoring smart room IoT menggunakan Laravel, Blade, MySQL, dan Arduino.</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/focus.jpg</image:loc>
+      <image:title>Focusly Mobile App Project - Muhammad Arga Pradana</image:title>
+      <image:caption>Aplikasi produktivitas mobile menggunakan Flutter dan SQLite.</image:caption>
+    </image:image>
 
     <!-- Certificate & Credential Images -->
     <image:image>

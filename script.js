@@ -490,12 +490,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const originalVisual = card.querySelector('.project-visual');
     projectModalVisual.innerHTML = originalVisual.innerHTML;
 
+    const isMobile = originalVisual.classList.contains('project-visual--mobile');
+    projectModalVisual.classList.toggle('is-mobile-project', isMobile);
+
     // Check if it has a slider and initialize
     const hasSlider = originalVisual.querySelector('.project-slider');
     if (hasSlider) {
       projectModalVisual.style.padding = '0';
       projectModalVisual.style.backgroundColor = 'transparent';
       initModalSlider();
+    } else if (isMobile) {
+      projectModalVisual.style.padding = '';
+      projectModalVisual.style.backgroundColor = '';
+      if (modalSliderIntervalId) {
+        clearInterval(modalSliderIntervalId);
+        modalSliderIntervalId = null;
+      }
     } else {
       projectModalVisual.style.padding = '';
       projectModalVisual.style.backgroundColor = window.getComputedStyle(originalVisual).backgroundColor;

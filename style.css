@@ -1094,6 +1094,105 @@ header .nav-container {
   color: #000000;
 }
 
+/* --- MOBILE APP PROJECT MOCKUP STYLES --- */
+.project-visual.project-visual--mobile {
+  background: linear-gradient(135deg, #180d2c 0%, #2e1065 50%, #0f172a 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.75rem 0 !important;
+}
+
+[data-theme="light"] .project-visual.project-visual--mobile {
+  background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 50%, #f1f5f9 100%) !important;
+}
+
+.mobile-mockup {
+  width: auto;
+  height: 94%;
+  max-height: 200px;
+  aspect-ratio: 9 / 18.5;
+  background: #09090b;
+  border: 3px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px var(--border-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.project-card:hover .project-visual--mobile .mobile-mockup {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 6px 6px 0px var(--border-color);
+}
+
+.project-visual--mobile .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 16px;
+  transform: none !important;
+}
+
+.mobile-notch {
+  width: 36%;
+  height: 7px;
+  background-color: #09090b;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Modal mobile visual */
+.project-modal-visual.is-mobile-project {
+  aspect-ratio: auto !important;
+  height: 380px !important;
+  max-height: 52vh !important;
+  background: linear-gradient(135deg, #180d2c 0%, #2e1065 50%, #0f172a 100%) !important;
+  padding: 1.25rem 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+[data-theme="light"] .project-modal-visual.is-mobile-project {
+  background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 50%, #f1f5f9 100%) !important;
+}
+
+.project-modal-visual.is-mobile-project .mobile-mockup {
+  height: 100%;
+  max-height: 340px;
+  aspect-ratio: 9 / 18.5;
+  border-radius: 28px;
+  border: 3px solid var(--border-color);
+  box-shadow: 6px 6px 0px var(--border-color);
+}
+
+.project-modal-visual.is-mobile-project .mobile-notch {
+  width: 34%;
+  height: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.project-modal-visual.is-mobile-project .mobile-mockup .project-img {
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transform: none !important;
+}
+
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1736,6 +1835,10 @@ footer .credits {
     width: 38px;
     height: 38px;
     font-size: 1.2rem;
+  }
+
+  .project-modal-visual.is-mobile-project {
+    height: 300px !important;
   }
 }
 

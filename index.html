@@ -101,6 +101,13 @@
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
+          "name": "UI/UX Design Competition Code Fest 2026",
+          "description": "Sertifikat penghargaan atas partisipasi dan pencapaian pada UI/UX Design Competition di Lomba Code Fest 2026.",
+          "recognizedBy": { "@type": "Organization", "name": "Lomba Code Fest" },
+          "url": "https://muhammadargapradana.vercel.app/assets/cert-fest.png"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
           "name": "Ketua Tim Verifikasi PEMILWA FV 2025",
           "description": "Surat Keputusan Panitia Pemilihan Mahasiswa (PEMILWA) Fakultas Vokasi 2025 sebagai Ketua Tim Verifikasi.",
           "recognizedBy": { "@type": "Organization", "name": "PEMILWA FV Universitas Brawijaya" },
@@ -108,24 +115,10 @@
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "Introduction to Java Certificate",
-          "description": "Sertifikat kursus Introduction to Java dari Sololearn.",
-          "recognizedBy": { "@type": "Organization", "name": "Sololearn" },
-          "url": "https://muhammadargapradana.vercel.app/assets/java.png"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
           "name": "Anggota HMPS TI 2025",
           "description": "Surat keterangan keanggotaan Himpunan Mahasiswa Program Studi Teknologi Informasi (HMPS TI).",
           "recognizedBy": { "@type": "Organization", "name": "HMPS Teknologi Informasi Universitas Brawijaya" },
           "url": "https://muhammadargapradana.vercel.app/assets/cert-hmps.png"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "PKKMB Fakultas Vokasi",
-          "description": "Pengenalan Kehidupan Kampus Bagi Mahasiswa Baru (PKKMB) Fakultas Vokasi Universitas Brawijaya.",
-          "recognizedBy": { "@type": "Organization", "name": "Universitas Brawijaya" },
-          "url": "https://muhammadargapradana.vercel.app/assets/yuwa.png"
         },
         {
           "@type": "EducationalOccupationalCredential",
@@ -150,10 +143,17 @@
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "UI/UX Design Competition Code Fest 2026",
-          "description": "Sertifikat penghargaan atas partisipasi dan pencapaian pada UI/UX Design Competition di Lomba Code Fest 2026.",
-          "recognizedBy": { "@type": "Organization", "name": "Lomba Code Fest" },
-          "url": "https://muhammadargapradana.vercel.app/assets/cert-fest.png"
+          "name": "PKKMB Fakultas Vokasi",
+          "description": "Pengenalan Kehidupan Kampus Bagi Mahasiswa Baru (PKKMB) Fakultas Vokasi Universitas Brawijaya.",
+          "recognizedBy": { "@type": "Organization", "name": "Universitas Brawijaya" },
+          "url": "https://muhammadargapradana.vercel.app/assets/yuwa.png"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Introduction to Java Certificate",
+          "description": "Sertifikat kursus Introduction to Java dari Sololearn.",
+          "recognizedBy": { "@type": "Organization", "name": "Sololearn" },
+          "url": "https://muhammadargapradana.vercel.app/assets/java.png"
         }
       ]
     },
@@ -1133,7 +1133,44 @@
       </div>
 
       <div class="certs-grid reveal">
-        <!-- Cert 1: PEMILWA FV 2025 -->
+        <!-- Cert 1: UI/UX Design Competition 2026 -->
+        <div class="neo-box neo-box-interactive cert-card" data-title="UI/UX Design Competition"
+          data-title-en="UI/UX Design Competition"
+          data-desc="Sertifikat penghargaan atas partisipasi dan pencapaian pada UI/UX Design Competition di Lomba Code Fest 2026."
+          data-desc-en="Certificate of achievement and participation in the UI/UX Design Competition at Code Fest 2026."
+          data-type="fest">
+          <div class="cert-thumbnail">
+            <img src="assets/cert-fest.png"
+              alt="Sertifikat UI/UX Design Competition Code Fest 2026 - Muhammad Arga Pradana"
+              title="Sertifikat Code Fest 2026 - Muhammad Arga Pradana" loading="lazy" class="cert-preview-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="cert-fallback-visual"
+              style="display:none; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; background:var(--primary-light); font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:#000;">
+              📜 <span>[CODE FEST 2026]</span>
+            </div>
+          </div>
+          <span class="neo-badge warning" style="background-color: var(--accent); color: var(--border-color);">
+            <span class="lang-id">Lomba</span>
+            <span class="lang-en">Competition</span>
+          </span>
+          <h3>
+            <span class="lang-id">UI/UX Design Competition</span>
+            <span class="lang-en">UI/UX Design Competition</span>
+          </h3>
+          <p class="cert-issuer">
+            <span class="lang-id">Lomba Code Fest • 2026</span>
+            <span class="lang-en">Code Fest Competition • 2026</span>
+          </p>
+          <div class="project-links">
+            <button class="neo-btn btn-white btn-sm cert-detail-btn"
+              style="font-size: 0.8rem; padding: 0.5rem 1rem; cursor: pointer; width: 100%; text-align: center;">
+              <span class="lang-id">Lihat Detail &rarr;</span>
+              <span class="lang-en">View Details &rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cert 2: PEMILWA FV 2025 -->
         <div class="neo-box neo-box-interactive cert-card" data-title="Ketua Tim Verifikasi PEMILWA FV 2025"
           data-title-en="Head of Verification Committee for PEMILWA FV 2025"
           data-desc="Surat Keputusan Panitia Pemilihan Mahasiswa (PEMILWA) Fakultas Vokasi 2025 sebagai Ketua Tim Verifikasi."
@@ -1170,41 +1207,7 @@
           </div>
         </div>
 
-        <!-- Cert 2: Introduction to Java -->
-        <div class="neo-box neo-box-interactive cert-card" data-title="Introduction to Java"
-          data-title-en="Introduction to Java" data-desc="Sertifikat kursus Introduction to Java dari Sololearn."
-          data-desc-en="Course completion certificate for Introduction to Java from Sololearn." data-type="java">
-          <div class="cert-thumbnail">
-            <img src="assets/java.png" alt="Sertifikat Introduction to Java Sololearn - Muhammad Arga Pradana"
-              title="Sertifikat Java Sololearn - Muhammad Arga Pradana" loading="lazy" class="cert-preview-img"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="cert-fallback-visual"
-              style="display:none; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; background:var(--primary-light); font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:#000;">
-              📜 <span>[JAVA CERTIFICATE]</span>
-            </div>
-          </div>
-          <span class="neo-badge success">
-            <span class="lang-id">Sertifikasi</span>
-            <span class="lang-en">Certification</span>
-          </span>
-          <h3>
-            <span class="lang-id">Introduction to Java</span>
-            <span class="lang-en">Introduction to Java</span>
-          </h3>
-          <p class="cert-issuer">
-            <span class="lang-id">Sololearn • 2024</span>
-            <span class="lang-en">Sololearn • 2024</span>
-          </p>
-          <div class="project-links">
-            <button class="neo-btn btn-white btn-sm cert-detail-btn"
-              style="font-size: 0.8rem; padding: 0.5rem 1rem; cursor: pointer; width: 100%; text-align: center;">
-              <span class="lang-id">Lihat Detail &rarr;</span>
-              <span class="lang-en">View Details &rarr;</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Cert 3: HMPS TI -->
+        <!-- Cert 3: HMPS TI 2025 -->
         <div class="neo-box neo-box-interactive cert-card" data-title="Anggota HMPS TI" data-title-en="HMPS TI Member"
           data-desc="Surat keterangan keanggotaan Himpunan Mahasiswa Program Studi Teknologi Informasi (HMPS TI)."
           data-desc-en="Membership certificate of the Information Technology Study Program Student Association (HMPS TI)."
@@ -1239,43 +1242,7 @@
           </div>
         </div>
 
-        <!-- Cert 4: PKKMB FV -->
-        <div class="neo-box neo-box-interactive cert-card" data-title="PKKMB Fakultas Vokasi"
-          data-title-en="PKKMB Vocational Faculty"
-          data-desc="Pengenalan Kehidupan Kampus Bagi Mahasiswa Baru (PKKMB) Fakultas Vokasi."
-          data-desc-en="Campus Life Orientation for New Students (PKKMB) Vocational Faculty." data-type="pkkmb">
-          <div class="cert-thumbnail">
-            <img src="assets/yuwa.png"
-              alt="Sertifikat PKKMB Fakultas Vokasi Universitas Brawijaya - Muhammad Arga Pradana"
-              title="Sertifikat PKKMB FV - Muhammad Arga Pradana" loading="lazy" class="cert-preview-img"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="cert-fallback-visual"
-              style="display:none; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; background:var(--primary-light); font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:#000;">
-              📜 <span>[PKKMB FV]</span>
-            </div>
-          </div>
-          <span class="neo-badge primary">
-            <span class="lang-id">Kepanitiaan</span>
-            <span class="lang-en">Committee</span>
-          </span>
-          <h3>
-            <span class="lang-id">PKKMB Fakultas Vokasi</span>
-            <span class="lang-en">PKKMB Vocational Faculty</span>
-          </h3>
-          <p class="cert-issuer">
-            <span class="lang-id">Pengenalan Kehidupan Kampus</span>
-            <span class="lang-en">Campus Life Orientation</span>
-          </p>
-          <div class="project-links">
-            <button class="neo-btn btn-white btn-sm cert-detail-btn"
-              style="font-size: 0.8rem; padding: 0.5rem 1rem; cursor: pointer; width: 100%; text-align: center;">
-              <span class="lang-id">Lihat Detail &rarr;</span>
-              <span class="lang-en">View Details &rarr;</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Cert 5: IT Charity 2025 -->
+        <!-- Cert 4: IT Charity 2025 -->
         <div class="neo-box neo-box-interactive cert-card"
           data-title="Kepala Divisi Sponsorship &amp; Konsumsi IT Charity 2025"
           data-title-en="Head of Sponsorship &amp; Consumption Division IT Charity 2025"
@@ -1313,7 +1280,7 @@
           </div>
         </div>
 
-        <!-- Cert 6: Vocational Legislative United (VALUE) 2025 -->
+        <!-- Cert 5: Vocational Legislative United (VALUE) 2025 -->
         <div class="neo-box neo-box-interactive cert-card" data-title="Pengawas Kompetisi &amp; Staff Acara VALUE 2025"
           data-title-en="Competition Supervisor &amp; Events Division Staff VALUE 2025"
           data-desc="Sertifikat Kepanitiaan Vocational Legislative United (VALUE) 2025 sebagai Pengawas Kompetisi dan Staff Divisi Acara."
@@ -1349,7 +1316,7 @@
           </div>
         </div>
 
-        <!-- Cert 7: Staff Ahli BALEG DPM FV -->
+        <!-- Cert 6: Staff Ahli BALEG DPM FV 2025 -->
         <div class="neo-box neo-box-interactive cert-card" data-title="Staff Ahli Badan Legislasi (BALEG) DPM FV"
           data-title-en="Expert Staff of the Legislative Body (BALEG) DPM FV"
           data-desc="Sertifikat keanggotaan sebagai Staff Ahli Badan Legislasi (BALEG) Dewan Perwakilan Mahasiswa Fakultas Vokasi."
@@ -1385,33 +1352,66 @@
           </div>
         </div>
 
-        <!-- Cert 8: UI/UX Design Competition -->
-        <div class="neo-box neo-box-interactive cert-card" data-title="UI/UX Design Competition"
-          data-title-en="UI/UX Design Competition"
-          data-desc="Sertifikat penghargaan atas partisipasi dan pencapaian pada UI/UX Design Competition di Lomba Code Fest 2026."
-          data-desc-en="Certificate of achievement and participation in the UI/UX Design Competition at Code Fest 2026."
-          data-type="fest">
+        <!-- Cert 7: PKKMB FV 2025 -->
+        <div class="neo-box neo-box-interactive cert-card" data-title="PKKMB Fakultas Vokasi"
+          data-title-en="PKKMB Vocational Faculty"
+          data-desc="Pengenalan Kehidupan Kampus Bagi Mahasiswa Baru (PKKMB) Fakultas Vokasi."
+          data-desc-en="Campus Life Orientation for New Students (PKKMB) Vocational Faculty." data-type="pkkmb">
           <div class="cert-thumbnail">
-            <img src="assets/cert-fest.png"
-              alt="Sertifikat UI/UX Design Competition Code Fest 2026 - Muhammad Arga Pradana"
-              title="Sertifikat Code Fest 2026 - Muhammad Arga Pradana" loading="lazy" class="cert-preview-img"
+            <img src="assets/yuwa.png"
+              alt="Sertifikat PKKMB Fakultas Vokasi Universitas Brawijaya - Muhammad Arga Pradana"
+              title="Sertifikat PKKMB FV - Muhammad Arga Pradana" loading="lazy" class="cert-preview-img"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="cert-fallback-visual"
               style="display:none; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; background:var(--primary-light); font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:#000;">
-              📜 <span>[CODE FEST 2026]</span>
+              📜 <span>[PKKMB FV]</span>
             </div>
           </div>
-          <span class="neo-badge warning" style="background-color: var(--accent); color: var(--border-color);">
-            <span class="lang-id">Lomba</span>
-            <span class="lang-en">Competition</span>
+          <span class="neo-badge primary">
+            <span class="lang-id">Kepanitiaan</span>
+            <span class="lang-en">Committee</span>
           </span>
           <h3>
-            <span class="lang-id">UI/UX Design Competition</span>
-            <span class="lang-en">UI/UX Design Competition</span>
+            <span class="lang-id">PKKMB Fakultas Vokasi</span>
+            <span class="lang-en">PKKMB Vocational Faculty</span>
           </h3>
           <p class="cert-issuer">
-            <span class="lang-id">Lomba Code Fest • 2026</span>
-            <span class="lang-en">Code Fest Competition • 2026</span>
+            <span class="lang-id">PKKMB FV • 2025</span>
+            <span class="lang-en">PKKMB FV • 2025</span>
+          </p>
+          <div class="project-links">
+            <button class="neo-btn btn-white btn-sm cert-detail-btn"
+              style="font-size: 0.8rem; padding: 0.5rem 1rem; cursor: pointer; width: 100%; text-align: center;">
+              <span class="lang-id">Lihat Detail &rarr;</span>
+              <span class="lang-en">View Details &rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cert 8: Introduction to Java 2024 -->
+        <div class="neo-box neo-box-interactive cert-card" data-title="Introduction to Java"
+          data-title-en="Introduction to Java" data-desc="Sertifikat kursus Introduction to Java dari Sololearn."
+          data-desc-en="Course completion certificate for Introduction to Java from Sololearn." data-type="java">
+          <div class="cert-thumbnail">
+            <img src="assets/java.png" alt="Sertifikat Introduction to Java Sololearn - Muhammad Arga Pradana"
+              title="Sertifikat Java Sololearn - Muhammad Arga Pradana" loading="lazy" class="cert-preview-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="cert-fallback-visual"
+              style="display:none; width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; background:var(--primary-light); font-family:var(--font-mono); font-weight:700; font-size:0.85rem; color:#000;">
+              📜 <span>[JAVA CERTIFICATE]</span>
+            </div>
+          </div>
+          <span class="neo-badge success">
+            <span class="lang-id">Sertifikasi</span>
+            <span class="lang-en">Certification</span>
+          </span>
+          <h3>
+            <span class="lang-id">Introduction to Java</span>
+            <span class="lang-en">Introduction to Java</span>
+          </h3>
+          <p class="cert-issuer">
+            <span class="lang-id">Sololearn • 2024</span>
+            <span class="lang-en">Sololearn • 2024</span>
           </p>
           <div class="project-links">
             <button class="neo-btn btn-white btn-sm cert-detail-btn"

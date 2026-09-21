@@ -55,6 +55,11 @@
       <image:title>Saber Game AI Project - Muhammad Arga Pradana</image:title>
       <image:caption>Platform web rental PlayStation terintegrasi AI Chatbot berbasis Laravel 10 dan Ollama.</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://muhammadargapradana.vercel.app/assets/olivia.png</image:loc>
+      <image:title>GARDAOVA Olivia IoT &amp; AI Project - Muhammad Arga Pradana</image:title>
+      <image:caption>Sistem IoT &amp; Edge AI Peternakan Ayam Petelur untuk monitoring mikroklimat kandang dan klasifikasi kualitas telur (Karya OLIVIA).</image:caption>
+    </image:image>
 
     <!-- Certificate & Credential Images -->
     <image:image>

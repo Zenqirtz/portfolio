@@ -1570,8 +1570,7 @@ footer .credits {
   z-index: 1000;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 1.5rem 1.5rem;
-  overflow-y: auto;
+  padding: 2rem;
 }
 
 .modal-content {
@@ -1580,55 +1579,36 @@ footer .credits {
   box-shadow: 10px 10px 0px var(--primary);
   max-width: 800px;
   width: 100%;
-  max-height: calc(100vh - 4rem);
-  display: flex;
-  flex-direction: column;
   position: relative;
   padding: 2rem;
-  margin: auto;
 }
 
 .modal-close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: -20px;
+  right: -20px;
   background-color: var(--accent);
   color: #ffffff;
   border: var(--border-width) solid #000000;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 3px 3px 0px #000000;
-  z-index: 10;
+  box-shadow: 4px 4px 0px #000000;
 }
 
 .modal-close:hover {
   transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px #000000;
+  box-shadow: 2px 2px 0px #000000;
 }
 
 .modal-body {
   text-align: center;
-  overflow-y: auto;
-  padding-right: 4px;
-}
-
-.modal-body::-webkit-scrollbar {
-  width: 6px;
-}
-
-.modal-body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.modal-body::-webkit-scrollbar-thumb {
-  background: var(--border-color);
 }
 
 .modal-body img {
@@ -1842,21 +1822,19 @@ footer .credits {
   }
 
   .modal {
-    padding: 1.5rem 1rem;
-    align-items: flex-start;
+    padding: 1rem;
   }
 
   .modal-content {
-    padding: 1.75rem 1.25rem;
-    max-height: calc(100vh - 3rem);
+    padding: 1.5rem 1rem;
   }
 
   .modal-close {
-    top: 10px;
-    right: 10px;
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
+    top: -16px;
+    right: -10px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
   }
 
   .project-modal-visual.is-mobile-project {
@@ -1866,8 +1844,8 @@ footer .credits {
 
 /* --- PROJECT MODAL STYLES --- */
 .project-modal-content {
-  max-width: 620px !important;
-  padding: 2.25rem 1.75rem 1.75rem !important;
+  max-width: 600px !important;
+  padding: 1.75rem !important;
 }
 
 .project-modal-body {
@@ -1896,7 +1874,6 @@ footer .credits {
   width: 100%;
   aspect-ratio: 16/9 !important;
   /* Scale height based on 16:9 ratio to fit full screenshots */
-  max-height: 38vh;
   height: auto;
   border: var(--border-width) solid var(--border-color);
   margin-bottom: 1.25rem;
@@ -1908,13 +1885,6 @@ footer .credits {
   box-shadow: 4px 4px 0px var(--border-color);
   background-color: #ffffff;
   /* Seamless blend for white-background screenshots */
-}
-
-.project-modal-visual .project-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background-color: #ffffff;
 }
 
 .project-modal-visual svg {

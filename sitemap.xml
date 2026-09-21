@@ -33,7 +33,7 @@
     <image:image>
       <image:loc>https://muhammadargapradana.vercel.app/assets/sims.png</image:loc>
       <image:title>Smart Infusion Monitoring System (SIMS) Project - Muhammad Arga Pradana</image:title>
-      <image:caption>Sistem monitoring infus pasien berbasis IoT (ESP32, HX711, IR) dan web dashboard React.js, Laravel, Inertia.js.</image:caption>
+      <image:caption>Sistem monitoring infus pasien real-time berbasis React.js, Laravel, Inertia.js, dan Tailwind CSS.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://muhammadargapradana.vercel.app/assets/brt.png</image:loc>

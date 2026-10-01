@@ -5,4 +5,4 @@ User-agent: Googlebot-Image
 Allow: /assets/
 Allow: /
 
-Sitemap: https://muhammadargapradana.my.id/sitemap.xml
+Sitemap: https://www.muhammadargapradana.my.id/sitemap.xml

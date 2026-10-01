@@ -6,6 +6,19 @@
       "use": "@vercel/static"
     }
   ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "muhammadargapradana.vercel.app"
+        }
+      ],
+      "destination": "https://www.muhammadargapradana.my.id/$1",
+      "permanent": true
+    }
+  ],
   "routes": [
     {
       "src": "/assets/(.*)",

@@ -305,23 +305,91 @@
 
   <!-- --- LOADING SCREEN --- -->
   <div id="loading-screen">
-    <div class="loader-box">
-      <div class="loader-glitch-bar"></div>
-      <div class="loader-logo">ARGAA</div>
-      <div class="loader-subtitle">
-        <span class="lang-id">Memuat Portfolio...</span>
-        <span class="lang-en">Loading Portfolio...</span>
+    <div class="ls-grid" aria-hidden="true"></div>
+
+    <!-- Floating stickers -->
+    <div class="ls-sticker ls-sticker--window ls-sticker--window1" aria-hidden="true">
+      <div class="ls-win-bar"><span></span><span></span><span></span></div>
+      <div class="ls-win-body">
+        <div class="ls-win-line"></div>
+        <div class="ls-win-line ls-win-line--short"></div>
       </div>
-      <div class="loader-bar-track">
-        <div class="loader-bar-fill" id="loader-bar-fill"></div>
-      </div>
-      <div class="loader-percent" id="loader-percent">0%</div>
-      <div class="loader-noise"></div>
     </div>
-    <div class="loader-corner loader-corner--tl">01</div>
-    <div class="loader-corner loader-corner--tr">WEB</div>
-    <div class="loader-corner loader-corner--bl">DEV</div>
-    <div class="loader-corner loader-corner--br">UB</div>
+
+    <div class="ls-sticker ls-sticker--window ls-sticker--window2" aria-hidden="true">
+      <div class="ls-win-bar ls-win-bar--pink"><span></span><span></span><span></span></div>
+      <div class="ls-win-body">
+        <div class="ls-win-grid">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ls-sticker ls-sticker--card" aria-hidden="true">
+      <div class="ls-card-bar"></div>
+      <div class="ls-card-body">✦</div>
+    </div>
+
+    <div class="ls-sticker ls-sticker--mood" aria-hidden="true">
+      <div class="ls-mood-bar"></div>
+      <div class="ls-mood-body">
+        <span class="ls-mood-heart">♥</span>
+        <span class="ls-mood-heart ls-mood-heart--blue">♦</span>
+        <span class="ls-mood-heart ls-mood-heart--yellow">♥</span>
+      </div>
+    </div>
+
+    <div class="ls-sticker ls-sticker--star ls-sticker--star1" aria-hidden="true">✦</div>
+    <div class="ls-sticker ls-sticker--star ls-sticker--star2" aria-hidden="true">✦</div>
+    <div class="ls-sticker ls-sticker--star ls-sticker--star3" aria-hidden="true">✶</div>
+    <div class="ls-sticker ls-sticker--star ls-sticker--star4" aria-hidden="true">✦</div>
+    <div class="ls-sticker ls-sticker--star ls-sticker--star5" aria-hidden="true">✷</div>
+
+    <div class="ls-sticker ls-sticker--shape ls-sticker--shape1" aria-hidden="true">✚</div>
+    <div class="ls-sticker ls-sticker--shape ls-sticker--shape2" aria-hidden="true">⬢</div>
+
+    <div class="ls-sticker ls-sticker--pin" aria-hidden="true">
+      <svg viewBox="0 0 32 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C9.4 2 4 7.4 4 14c0 8.5 12 28 12 28s12-19.5 12-28c0-6.6-5.4-12-12-12Z" fill="#2dd4bf" stroke="#000" stroke-width="2.5"/><circle cx="16" cy="14" r="5" fill="#fff" stroke="#000" stroke-width="2.5"/></svg>
+    </div>
+
+    <div class="ls-sticker ls-sticker--globe" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="21" stroke="#fff" stroke-width="2.5"/><ellipse cx="24" cy="24" rx="9" ry="21" stroke="#fff" stroke-width="2.5"/><ellipse cx="24" cy="24" rx="21" ry="8" stroke="#fff" stroke-width="2.5"/></svg>
+    </div>
+
+    <div class="ls-sticker ls-sticker--arrow" aria-hidden="true">
+      <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 30C24 8 66 4 104 12" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M92 4L106 12.5L90 19" fill="#fff"/></svg>
+    </div>
+
+    <div class="ls-sticker ls-sticker--heart" aria-hidden="true">♥</div>
+
+    <div class="ls-sticker ls-sticker--cursor" aria-hidden="true">
+      <svg width="40" height="46" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L2 22L7 17L11 25L14 24L10 16L17 16L2 2Z" fill="#ffffff" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/></svg>
+    </div>
+
+    <div class="ls-sticker ls-sticker--bubble ls-sticker--bubble1" aria-hidden="true">
+      <span class="lang-id">Halooo</span>
+      <span class="lang-en">Halooo</span>
+    </div>
+    <div class="ls-sticker ls-sticker--bubble ls-sticker--bubble3" aria-hidden="true">
+      <span class="lang-id">Portfolio</span>
+      <span class="lang-en">Portfolio</span>
+    </div>
+
+    <!-- Center badge -->
+    <div class="ls-badge">
+      <div class="ls-badge-inner">
+        <div class="ls-badge-logo">MUHAMMAD ARGA PRADANA</div>
+        <div class="ls-badge-sub">
+          <span class="lang-id">Full Stack Developer</span>
+          <span class="lang-en">Full Stack Developer</span>
+        </div>
+        <div class="ls-bar-track">
+          <div class="ls-bar-fill" id="loader-bar-fill"></div>
+        </div>
+        <div class="ls-percent" id="loader-percent">0%</div>
+      </div>
+    </div>
   </div>
 
   <!-- --- HEADER & NAVIGATION --- -->

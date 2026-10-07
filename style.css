@@ -533,69 +533,129 @@
 }
 
 @media (max-width: 900px) {
-  .ls-sticker--window,
-  .ls-sticker--card,
   .ls-sticker--mood,
   .ls-sticker--globe,
-  .ls-sticker--shape2,
   .ls-sticker--star5 {
     display: none;
   }
 
-  .ls-sticker--bubble3 {
-    display: none;
+  /* Compact but still populated arrangement for tablets / large phones */
+  .ls-sticker--window1 {
+    top: 6%;
+    left: 5%;
+    width: 130px;
+  }
+
+  .ls-sticker--window2 {
+    bottom: 6%;
+    right: 5%;
+    width: 130px;
+  }
+
+  .ls-sticker--card {
+    top: 5%;
+    left: 42%;
+    width: 100px;
+  }
+
+  .ls-card-body {
+    font-size: 2rem;
+    padding: 10px 0 13px;
+  }
+
+  .ls-win-body {
+    padding: 10px 10px 13px;
+  }
+
+  .ls-win-line {
+    height: 8px;
+    margin-bottom: 7px;
+  }
+
+  .ls-win-grid {
+    gap: 6px;
+  }
+
+  .ls-win-grid span {
+    height: 20px;
+  }
+
+  .ls-sticker--pin {
+    top: 22%;
+    left: 12%;
+    width: 52px;
+  }
+
+  .ls-sticker--arrow {
+    top: 4%;
+    left: 36%;
+    width: 120px;
+  }
+
+  .ls-sticker--heart {
+    bottom: 36%;
+    left: 46%;
+    font-size: 2.6rem;
+  }
+
+  .ls-sticker--shape1 {
+    top: 60%;
+    left: 5%;
+    font-size: 2.6rem;
+  }
+
+  .ls-sticker--shape2 {
+    top: 4%;
+    left: 58%;
+    font-size: 2.4rem;
   }
 
   .ls-sticker--star1 {
-    top: 6%;
-    left: 34%;
+    top: 16%;
+    left: 55%;
     font-size: 2.6rem;
   }
 
   .ls-sticker--star2 {
-    top: 14%;
-    right: 8%;
+    top: 15%;
+    right: 23%;
     font-size: 2.4rem;
+  }
+
+  .ls-sticker--star3 {
+    bottom: 30%;
+    left: 13%;
+    font-size: 2.4rem;
+  }
+
+  .ls-sticker--star4 {
+    bottom: 22%;
+    right: 12%;
+    font-size: 2.6rem;
+  }
+
+  .ls-sticker--cursor {
+    top: 26%;
+    left: 52%;
+  }
+
+  .ls-sticker--bubble1 {
+    top: 21%;
+    right: 8%;
+    font-size: 1.15rem;
+    padding: 10px 16px;
+  }
+
+  .ls-sticker--bubble3 {
+    bottom: 8%;
+    left: 8%;
+    right: auto;
+    font-size: 1rem;
+    padding: 9px 14px;
   }
 }
 
 @media (max-width: 640px) {
-  .ls-sticker--arrow,
-  .ls-sticker--pin,
-  .ls-sticker--heart,
-  .ls-sticker--shape1 {
-    display: none;
-  }
-
-  /* Keep only a few well-placed stickers so nothing crowds the badge */
-  .ls-sticker--star3 {
-    bottom: 10%;
-    left: 8%;
-    font-size: 2rem;
-  }
-
-  .ls-sticker--star4 {
-    bottom: 6%;
-    right: 10%;
-    font-size: 2rem;
-  }
-
-  .ls-sticker--star1 {
-    top: 5%;
-    left: 8%;
-    font-size: 2.2rem;
-  }
-
-  .ls-sticker--star2 {
-    top: 8%;
-    right: 8%;
-    font-size: 2.2rem;
-  }
-
-  .ls-sticker--cursor {
-    display: none;
-  }
-
   .ls-badge {
     padding: 1rem 1rem;
     box-shadow: 7px 7px 0 #000;
@@ -629,16 +689,81 @@
     box-shadow: 4px 4px 0 #000;
   }
 
-  .ls-sticker--bubble1 {
-    top: 16%;
-    right: 8%;
-  }
-
   .ls-sticker--bubble::after {
     border-left-width: 8px;
     border-right-width: 8px;
     border-top-width: 10px;
     bottom: -10px;
+  }
+}
+
+@media (max-width: 430px) {
+  /* Trim the least useful decorations on small phones */
+  .ls-sticker--card,
+  .ls-sticker--arrow,
+  .ls-sticker--shape2,
+  .ls-sticker--heart,
+  .ls-sticker--star1 {
+    display: none;
+  }
+
+  .ls-sticker--window1 {
+    top: 5%;
+    left: 4%;
+    width: 112px;
+  }
+
+  .ls-sticker--window2 {
+    bottom: 5%;
+    right: 4%;
+    width: 112px;
+  }
+
+  .ls-sticker--pin {
+    top: 26%;
+    left: 8%;
+    width: 46px;
+  }
+
+  .ls-sticker--shape1 {
+    top: 63%;
+    left: 4%;
+    font-size: 2.2rem;
+  }
+
+  .ls-sticker--star2 {
+    top: 12%;
+    right: 26%;
+    font-size: 2.2rem;
+  }
+
+  .ls-sticker--star4 {
+    bottom: 27%;
+    right: 7%;
+    font-size: 2.2rem;
+  }
+
+  .ls-sticker--star3 {
+    bottom: 34%;
+    left: 6%;
+    font-size: 2rem;
+  }
+
+  .ls-sticker--cursor {
+    display: none;
+  }
+
+  .ls-sticker--bubble1 {
+    top: 20%;
+    right: 5%;
+    font-size: 1rem;
+  }
+
+  .ls-sticker--bubble3 {
+    bottom: 6%;
+    left: 5%;
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }
 
@@ -652,19 +777,19 @@
     letter-spacing: 1.5px;
   }
 
-  .ls-sticker--bubble {
-    font-size: 0.85rem;
-    padding: 7px 12px;
-  }
-
-  .ls-sticker--star {
+  .ls-sticker--window2,
+  .ls-sticker--star3,
+  .ls-sticker--star4 {
     display: none;
   }
 
-  .ls-sticker--star2 {
-    display: block;
-    top: 7%;
-    right: 8%;
+  .ls-sticker--window1 {
+    width: 96px;
+  }
+
+  .ls-sticker--bubble {
+    font-size: 0.85rem;
+    padding: 7px 12px;
   }
 }
 

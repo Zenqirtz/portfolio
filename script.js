@@ -23,7 +23,7 @@ if (window.location.hash) {
   document.body.style.overflow = 'hidden';
 
   let progress = 0;
-  const totalDuration = 2200; // ms
+  const totalDuration = 1200; // ms
   const interval = 20;
   const steps = totalDuration / interval;
   const increment = 100 / steps;
@@ -39,7 +39,7 @@ if (window.location.hash) {
         loadingScreen.classList.add('hidden');
         document.body.classList.add('page-loaded');
         document.body.style.overflow = '';
-      }, 400);
+      }, 250);
     }
     barFill.style.width = progress + '%';
     percentEl.textContent = Math.floor(progress) + '%';
